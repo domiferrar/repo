@@ -1,0 +1,14 @@
+<li class="post-item">
+    <a href="{{ .Permalink }}" role="button">
+        {{ if .Site.Params.dateform }}
+        <span class="meta" style="color: black">
+            <time datetime='{{ .Date.Format "Jan 2, 2018" }}'>{{ .Date.Format .Site.Params.dateform }} </time>
+        </span>
+        {{ else }}
+        <span class="meta" style="color: black">
+            <time datetime='{{ .Date.Format "Jan 2, 2018" }}'>{{ .Date.Format "Jan 2, 2018" }} </time>
+        </span>
+        {{ end }}
+        <span> {{ .Title }}</span>
+    </a>
+</li>

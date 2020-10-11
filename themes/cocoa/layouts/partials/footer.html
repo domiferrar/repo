@@ -1,0 +1,11 @@
+<body>
+    <footer role="footer" style="text-align: center">
+        {{ if .Site.Social }}
+        <br> {{ partial "social.html" . }}
+        <br>{{ end }}
+        <p>
+            <a class="title" href=" {{ .Site.BaseURL }} ">{{.Site.Params.copyright }}</a> © Copyright {{ now.Format "2006" }}
+        </p>
+    </footer>
+</body>
+{{ partial "footer_scripts.html" . }}
